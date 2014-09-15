@@ -55,7 +55,7 @@ void CmdLineBegins(tDataNode *);
     printf("Menu List:\n");
     p = head;
 	ShowList(p);        /*show cmd list*/              
-	LineBegins(head);   /* cmd line begins */
+	CmdLineBegins(head);   /* cmd line begins */
 }
 
 
@@ -87,7 +87,7 @@ tDataNode* Init(tDataNode *head)
     {
         p = (tDataNode*)malloc(sizeof(tDataNode));
        
-        printf("please input %d cmd\n",i);
+        printf("please input %d cmd\n",i+1);
 		scanf("%s",p->cmd);
 		while( Check(p->cmd,head) == 1)
 		{
